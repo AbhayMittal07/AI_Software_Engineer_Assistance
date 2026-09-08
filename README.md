@@ -193,7 +193,7 @@ Security analysis searches for potentially dangerous coding patterns and insecur
 
 Examples include:
 
-### Hardcoded Secrets
+## Hardcoded Secrets
 
 ```python
 API_KEY = "my-secret-api-key"
@@ -326,7 +326,7 @@ The assistant can also provide recommendations involving:
 * Readability
 * Maintainability
 
----
+------
 
 # 📚 8. Automatic Documentation Generation
 
@@ -348,7 +348,7 @@ Testing
 Deployment
 ```
 
-### Installation Guide
+## Installation Guide
 
 Explains:
 

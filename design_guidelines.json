@@ -1,0 +1,132 @@
+{
+  "identity_and_vibe": {
+    "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST (The Dev Command Center)",
+    "emotion": "Objective, Authoritative, Technical, Precise.",
+    "core_concept": "A developer tool that feels like elite flight control. No soft edges, no muddy shadows. Pure data, sharp borders, high contrast. We are building the Anti-SaaS."
+  },
+  "theme": "dark_mode_first_with_light_toggle",
+  "typography": {
+    "headings_font": "JetBrains Mono (fallback: Space Mono)",
+    "body_font": "IBM Plex Sans (fallback: Geist)",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-mono tracking-tighter uppercase",
+      "h2": "text-2xl sm:text-3xl font-mono tracking-tight",
+      "h3": "text-xl sm:text-2xl font-mono",
+      "body": "text-base leading-relaxed font-sans",
+      "labels": "text-xs tracking-[0.2em] uppercase font-mono"
+    },
+    "rules": [
+      "NEVER use Inter, Roboto, or Open Sans for headings.",
+      "Headings must use tight letter spacing. Labels must use wide tracking.",
+      "Never center-align paragraphs. Left-align text for readability."
+    ]
+  },
+  "colors": {
+    "dark_mode": {
+      "background": "#050505",
+      "surface": "#0F0F0F",
+      "border": "#262626",
+      "text_primary": "#F4F4F5",
+      "text_secondary": "#A1A1AA",
+      "accent_primary": "#00E5FF",
+      "accent_danger": "#FF3B30",
+      "accent_warning": "#FFCC00",
+      "accent_success": "#34C759"
+    },
+    "light_mode": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "border": "#E4E4E7",
+      "text_primary": "#09090B",
+      "text_secondary": "#71717A",
+      "accent_primary": "#0055FF",
+      "accent_danger": "#DC2626",
+      "accent_warning": "#D97706",
+      "accent_success": "#16A34A"
+    },
+    "rules": [
+      "NO generic full-screen gradients.",
+      "DO NOT use teal green or teal blue (#1B93A4) for dashboards. Use Electric Cyan (#00E5FF) sparingly instead.",
+      "Never use pure #000000 or #808080 without a subtle tint."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": "Grid Borders (Technical Look). Expose the skeleton. Container uses border-collapse style layout. Items have subtle borders on right/bottom.",
+    "hover_states": "Slight lift (-translate-y-1), border color brightens. ALWAYS explicitly set text color on hover.",
+    "textures": "Subtle CSS noise overlay for dark mode to kill digital flatness.",
+    "loaders": "ASCII Art retro-futuristic loaders for fetching repo data."
+  },
+  "components": {
+    "cards": "Flat background, 1px subtle border, NO soft shadows. Sharp edges (rounded-none or max rounded-sm).",
+    "buttons": "Sharp corners or strict pill-shaped. High contrast hover states.",
+    "forms": "Use Shadcn customized components. Input fields must have distinct focus rings (focus:ring-2 focus:ring-accent).",
+    "data_viz": "Recharts with high-contrast series lines. No muddy gradients inside charts.",
+    "modals": "Glassmorphism (Crystal/Apple variant) for modal overlays (backdrop-blur-xl bg-black/60) with 1px delicate inner stroke."
+  },
+  "grids_and_layouts": {
+    "spacing_system": "Generous. Use p-6, p-8, p-12. Containers with borders MUST have internal padding.",
+    "dashboard_grid": "MODE B: High Density Grid. grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-4 or gap-6. Every pixel utilized. h-full on children.",
+    "marketing_pages": "MODE A: The 'Tetris' Grid. Asymmetry, Visual Tension. grid-cols-1 md:grid-cols-12 with gap-8. Span logic mixed (span-8, span-4, span-2).",
+    "alignment": "Optical alignment over geometrical. Left-align lists, forms, tabular data."
+  },
+  "motion": {
+    "rules": [
+      "Micro-animations for hover and focus states.",
+      "Transition specifically (e.g., transition: transform 0.2s ease, border-color 0.2s ease). NEVER use 'transition: all'.",
+      "Respect prefers-reduced-motion."
+    ]
+  },
+  "accessibility": {
+    "contrast": "APCA standard. Min 4.5:1 for normal text, 3:1 for large text. Ensure text over images has background scrim or text-shadow.",
+    "focus": "Focus states must have HIGHER contrast than default state.",
+    "testing": "All interactive elements MUST include a 'data-testid' attribute in kebab-case based on role (e.g., data-testid='login-submit-button')."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/33433724/pexels-photo-33433724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Futuristic coding workspace",
+        "category": "Login Page Hero / Landing Hero"
+      },
+      {
+        "url": "https://images.pexels.com/photos/8134609/pexels-photo-8134609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Neon digital numbers projection",
+        "category": "AI Analyzing State / Empty States"
+      },
+      {
+        "url": "https://images.pexels.com/photos/30820142/pexels-photo-30820142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract geometric data flow",
+        "category": "Dashboard Header Background / Banner"
+      }
+    ],
+    "icons": "lucide-react (Default choice for clean, minimal technical UI)"
+  },
+  "3d_libraries": {
+    "recommendation": "Use Mermaid.js for pure technical documentation and diagram viewing. If complex interactive repo maps are needed, use React Force Graph 2D/3D."
+  },
+  "instructions_to_main_agent": {
+    "file_extensions": "CRITICAL: Use .js and .jsx files, NOT .tsx files. Ignore previous TypeScript requirements per the Critical Rules.",
+    "routing": "Use React Router DOM for routing.",
+    "styling": "Tailwind CSS + customized Shadcn components (using raw HTML/Tailwind for complex grids).",
+    "headers": "DO NOT use complete transparent background in header. Use backdrop-blur and solid colors.",
+    "testing_tags": "Add 'data-testid' to ALL buttons, links, inputs, and tab triggers."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Create new components that match the style and conventions of existing components when needed.",
+    "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.jsx'."
+  ]
+}
